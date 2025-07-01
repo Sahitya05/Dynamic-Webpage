@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML + CSS Only Interaction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #7ba4ec, #73b18c);
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    label {
+      background-color: white;
+      color: #4b8de3;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    label:hover {
+      background-color: #4b8de3;
+      color: white;
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 1.5em;
+      display: none;
+    }
+
+    input[type="checkbox"]:checked ~ .message {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome!</h1>
+  <p>Click the button below to reveal a message.</p>
+
+  <input type="checkbox" id="toggle" />
+  <label for="toggle">Show Message</label>
+
+  <div class="message">
+    🌟 You are doing great! Keep learning! 🌟
+  </div>
+
+</body>
+</html>
